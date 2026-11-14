@@ -1,0 +1,11 @@
+import { Header, initHeader } from './components/header.js';
+import { Hero } from './components/hero.js';
+import { About } from './components/about.js';
+import { Services } from './components/services.js';
+import { Philosophy } from './components/philosophy.js';
+import { Note } from './components/note.js';
+import { Contact, initContact } from './components/contact.js';
+import { Footer } from './components/footer.js';
+import { initReveal, initHeroMedia } from './motion.js';
+document.querySelector('#app').innerHTML = `${Header()}<main id="main">${Hero()}${About()}${Services()}${Philosophy()}${Note()}${Contact()}</main>${Footer()}`;
+initHeader();initContact();initReveal();initHeroMedia();
