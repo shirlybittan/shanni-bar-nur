@@ -112,7 +112,7 @@ export const contactConfig = {
 // Hero media. Leave video empty until the approved asset exists (see docs/HERO-VIDEO-BRIEF.md);
 // the static botanical composition is shown instead. Poster is optional: an image of the video's first frame.
 export const heroMedia = {
-  // Source: Hailuo AI clip (1344×768, 6.6 s) → cropped to 4:5, loop seam cross-faded, audio removed.
+  // Source: Hailuo AI clip (1344×768, 6.6 s), leaves dissolve into serum inside the bottle; loop seam cross-faded, audio removed.
   poster: './assets/media/hero-poster.webp',
   videoWebm: './assets/media/hero-loop.webm',
   videoMp4: './assets/media/hero-loop.mp4',

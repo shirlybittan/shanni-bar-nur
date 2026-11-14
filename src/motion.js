@@ -16,7 +16,7 @@ export function initReveal() {
 // Hero loop: attached only when a file is configured, motion is allowed and Save-Data is off.
 // Plays only while on screen; the still/poster stays underneath as the fallback.
 export function initHeroMedia() {
-  const frame = document.querySelector('[data-hero-media] .hero-arch');
+  const frame = document.querySelector('[data-hero-media] .hero-frame');
   if (!frame || !(heroMedia.videoWebm || heroMedia.videoMp4)) return;
   if (reduce.matches || navigator.connection?.saveData) return;
   const video = document.createElement('video');

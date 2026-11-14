@@ -1,12 +1,13 @@
 # Hero animation: generation brief & technical requirements
 
 > **Current asset (14 Nov 2026):** Hailuo AI clip, 1344×768 at 24 fps, 6.6 s. Processing for the site:
-> - Cropped to 4:5 around the bottle and kept at native resolution (616×770).
+> - Leaves no longer stay visible inside the bottle. As each leaf sinks into the neck it melts into a golden glow, a thread of serum falls, and the liquid ripples and settles. The bottle interior is a clean plate built from the clip's own frames.
+> - Full frame (16:9) at native resolution. On desktop it fills the hero behind the copy; on mobile/tablet it runs edge to edge under the copy, cropped around the bottle with `object-position`.
 > - The last 0.5 s is cross-faded into the first 0.5 s so the loop has no visible jump.
 > - Audio removed. Final loop is 6.1 s.
 >
-> Output: `assets/media/hero-loop.webm` (VP9, 267 KB), `hero-loop.mp4` (H.264, 399 KB) and `hero-poster.webp` (26 KB, first frame).
-> To upgrade later, generate at ≥1080 px tall in 4:5 and re-run the commands below.
+> Output: `assets/media/hero-loop.webm` (VP9, 283 KB), `hero-loop.mp4` (H.264, 546 KB) and `hero-poster.webp` (35 KB, first frame).
+> To upgrade later, generate at 1920×1080 or larger and re-run the commands below.
 
 The site is already wired for this asset. Drop the files into `assets/media/` and fill in `heroMedia` in `src/content.js`. Until then, the hero shows the original BAR NUR lotus on a warm arched ground.
 
@@ -37,7 +38,7 @@ Negative: *camera move, spin, fast motion, sparkles, glow particles, magic dust,
 ## Technical requirements
 | Item | Spec |
 |---|---|
-| Aspect / framing | **4:5** (matches the arched frame). Keep the bottle and all action inside the central 70% width and lower 75% height, because the arch crops the top corners. |
+| Aspect / framing | **16:9**, full-bleed. Keep the bottle in the right third (x ≈ 65–80%) and the left half as open wall, because the headline sits there on desktop. Mobile crops a 4:5 window around the bottle. |
 | Master | 1600×2000, 24 or 25 fps, ProRes or high-bitrate MP4 |
 | Delivery – WebM | `hero-loop.webm`, VP9 (or AV1), 960×1200, CRF ~34, **≤ 1.8 MB**, no audio track |
 | Delivery – MP4 | `hero-loop.mp4`, H.264 High, 960×1200, `-crf 26 -preset slow -movflags +faststart -an`, **≤ 2.5 MB** |
