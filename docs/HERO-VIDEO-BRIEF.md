@@ -1,5 +1,13 @@
 # Hero animation: generation brief & technical requirements
 
+> **Current asset (14 Nov 2026):** Hailuo AI clip, 1344×768 at 24 fps, 6.6 s. Processing for the site:
+> - Cropped to 4:5 around the bottle and kept at native resolution (616×770).
+> - The last 0.5 s is cross-faded into the first 0.5 s so the loop has no visible jump.
+> - Audio removed. Final loop is 6.1 s.
+>
+> Output: `assets/media/hero-loop.webm` (VP9, 267 KB), `hero-loop.mp4` (H.264, 399 KB) and `hero-poster.webp` (26 KB, first frame).
+> To upgrade later, generate at ≥1080 px tall in 4:5 and re-run the commands below.
+
 The site is already wired for this asset. Drop the files into `assets/media/` and fill in `heroMedia` in `src/content.js`. Until then, the hero shows the original BAR NUR lotus on a warm arched ground.
 
 ## Recommended route

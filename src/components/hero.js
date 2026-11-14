@@ -4,7 +4,7 @@ import { lotus, petals } from '../art.js';
 // The media frame has a fixed aspect ratio, so the poster, the video and the static
 // composition all occupy the same box (no layout shift). The video is attached by motion.js.
 function heroStill() {
-  if (heroMedia.poster) return `<img class="hero-poster" src="${escapeHtml(heroMedia.poster)}" alt="" width="1200" height="1500" fetchpriority="high" decoding="async">`;
+  if (heroMedia.poster) return `<img class="hero-poster" src="${escapeHtml(heroMedia.poster)}" alt="" width="616" height="770" fetchpriority="high" decoding="async">`;
   return `<div class="hero-still" aria-hidden="true"><span class="hero-glow"></span>${lotus('hero-lotus')}</div>`;
 }
 export function Hero() {

@@ -112,8 +112,9 @@ export const contactConfig = {
 // Hero media. Leave video empty until the approved asset exists (see docs/HERO-VIDEO-BRIEF.md);
 // the static botanical composition is shown instead. Poster is optional: an image of the video's first frame.
 export const heroMedia = {
-  poster: '',            // e.g. './assets/media/hero-poster-1200.avif'
-  videoWebm: '',         // e.g. './assets/media/hero-loop.webm'
-  videoMp4: '',          // e.g. './assets/media/hero-loop.mp4'
-  alt: 'בקבוק זכוכית בגוון ענבר בין עלי רוזמרין, לבנדר ועלי כותרת'
+  // Source: Hailuo AI clip (1344×768, 6.6 s) → cropped to 4:5, loop seam cross-faded, audio removed.
+  poster: './assets/media/hero-poster.webp',
+  videoWebm: './assets/media/hero-loop.webm',
+  videoMp4: './assets/media/hero-loop.mp4',
+  alt: 'בקבוק זכוכית בגוון ענבר בין לבנדר, קמומיל ועלי צמחים שמרחפים אל פתח הבקבוק'
 };
